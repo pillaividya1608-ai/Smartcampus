@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campus Smart Info Hub - Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Campus Smart Info Hub</h1>
+    <button onclick="logout()">Logout</button>
+</header>
+
+<!-- HOST CONTROL PANEL -->
+<div id="host-panel" class="host-panel">
+    <h3>🔐 Host Control Panel</h3>
+    <p class="host-note">
+        Editing is restricted to hosts.<br>
+        Changes are done via Google Forms / Sheets.
+    </p>
+
+    <div class="host-actions">
+
+        <div class="host-card">
+            <h4>📅 Calendar</h4>
+            <a href="https://calendar.google.com" target="_blank">Edit Calendar</a>
+        </div>
+
+        <div class="host-card">
+            <h4>📢 Announcements</h4>
+            <a href="https://docs.google.com/forms" target="_blank">Add Announcement (Form)</a>
+            <a href="https://docs.google.com/spreadsheets" target="_blank">Edit / Delete (Sheet)</a>
+        </div>
+
+        <div class="host-card">
+            <h4>🏫 Classrooms</h4>
+            <a href="https://docs.google.com/spreadsheets" target="_blank">Edit Availability</a>
+        </div>
+
+    </div>
+</div>
+
+<!-- CALENDAR -->
+<section>
+    <h2>📅 Events & Deadlines</h2>
+    <iframe
+        src="https://calendar.google.com/calendar/embed?src=01774e504cbf899d89e2afe065afe0b355c7e3dce0acd694c2d15c33b489542b%40group.calendar.google.com&ctz=Asia%2FKolkata"
+        frameborder="0">
+    </iframe>
+</section>
+
+<!-- ANNOUNCEMENTS -->
+<section>
+    <h2>📢 Announcements</h2>
+    <div id="announcements-container"></div>
+    <p id="view-only-label">👀 View-only for students</p>
+</section>
+
+<!-- CLASSROOM AVAILABILITY -->
+<section>
+    <h2>🏫 Classroom Availability</h2>
+    <table id="classroom-table">
+        <thead>
+            <tr>
+                <th>ROOM NO</th>
+                <th>TIMING</th>
+                <th>STATUS</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
